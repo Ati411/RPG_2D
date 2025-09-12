@@ -22,7 +22,7 @@
 
 <img width="1198" height="577" alt="image" src="https://github.com/user-attachments/assets/626bc12c-709b-4e15-a137-eca71e4e4352" />
 
-## Animator
+## Animation
 ทุกการเคลื่อนไหวของตัวละครจะแสดง Animation ของการกระทำต่างๆ เช่น ยืน การกระโดด เดิน โดน Damage และการตาย
 
 https://github.com/user-attachments/assets/b493b2b8-2c30-497b-8367-debd2d6d3f5a
