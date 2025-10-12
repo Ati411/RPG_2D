@@ -6,6 +6,7 @@ public class Gatherinput : MonoBehaviour
     private Controls myControl;
     public float valueX;
     public bool JumpInput;
+    public bool tryAttack;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,8 +26,12 @@ public class Gatherinput : MonoBehaviour
     {
         myControl.Player.Move.performed += StartMove;
         myControl.Player.Move.canceled += StopMove;
+
         myControl.Player.Jump.performed += JumpStart;
         myControl.Player.Jump.canceled += JumpStop;
+
+        myControl.Player.Attack.performed += AttackStart;
+        myControl.Player.Attack.canceled += AttackStop;
         myControl.Player.Enable();
     }
     public void OnDisable()
@@ -38,7 +43,18 @@ public class Gatherinput : MonoBehaviour
         myControl.Player.Jump.performed -= JumpStart;
         myControl.Player.Jump.canceled -= JumpStop;
 
+        myControl.Player.Attack.performed += AttackStart;
+        myControl.Player.Attack.canceled += AttackStop;
+
         myControl.Player.Disable();
+    }
+    private void AttackStart(InputAction.CallbackContext ctx)
+    {
+        tryAttack = true;
+    }
+    private void AttackStop(InputAction.CallbackContext ctx)
+    {
+        tryAttack = false;
     }
     private void StartMove(InputAction.CallbackContext ctx)
     {
@@ -63,6 +79,9 @@ public class Gatherinput : MonoBehaviour
 
         myControl.Player.Jump.performed -= JumpStart;
         myControl.Player.Jump.canceled -= JumpStop;
+        
+        myControl.Player.Attack.performed += AttackStart;
+        myControl.Player.Attack.canceled += AttackStop;
 
         myControl.Player.Disable();
         valueX = 0;

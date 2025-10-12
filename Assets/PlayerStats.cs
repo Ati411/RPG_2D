@@ -10,7 +10,6 @@ public class PlayerStats : MonoBehaviour
     public Slider HealthSlider;
     private bool CanTakeDamage = true;
     private Animator anim;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponentInParent<Animator>();

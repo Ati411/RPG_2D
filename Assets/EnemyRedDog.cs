@@ -1,28 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyRedDog : Enemy
 {
-
-    public float speed = 1;
-    private int direction = -1;
-
     public Transform groundCheck;
     public Transform wallCheck;
     public LayerMask layerToCheck;
-
     private bool detectGround;
     private bool detectWall;
     public float radius;
+    public float speed = 1;
+    private int direction = -1;
 
     private void FixedUpdate()
     {
-        Filp();
-        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+        Flip();
+        Rigidbody2D.linearVelocity = new Vector2(direction * speed, Rigidbody2D.linearVelocity.y);
     }
-    private void Filp() 
+    private void Flip() 
     { 
         detectGround = Physics2D.OverlapCircle(groundCheck.position, radius, layerToCheck);         
         detectWall = Physics2D.OverlapCircle(wallCheck.position, radius, layerToCheck);

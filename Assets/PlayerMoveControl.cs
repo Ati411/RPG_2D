@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Xml.Serialization;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.ShaderGraph;
@@ -6,8 +7,6 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerMoveControl : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     public float speed = 5f;
     private Gatherinput gatherInput;
     private Rigidbody2D Rigidbody2D;
@@ -18,6 +17,7 @@ public class PlayerMoveControl : MonoBehaviour
     public Transform leftPoint;
     public float rayLength;
     public LayerMask GroundLayer;
+    private bool knockback = false;
     void Start()
     {
         gatherInput = GetComponent<Gatherinput>();
@@ -42,13 +42,16 @@ public class PlayerMoveControl : MonoBehaviour
     private void FixedUpdate()
     {
         CheckStatus();
+
+        if (knockback) return;
+
         Move();
         JumpPlayer();
     }
     private void Move()
     {
         Flip();
-        Rigidbody2D.linearVelocity = new Vector2(speed * gatherInput.valueX, Rigidbody2D.linearVelocity.y);  
+        Rigidbody2D.linearVelocity = new Vector2(speed * gatherInput.valueX, Rigidbody2D.linearVelocity.y);
     }
     private void Flip()
     {
@@ -70,6 +73,27 @@ public class PlayerMoveControl : MonoBehaviour
     {
         RaycastHit2D leftCheckHit = Physics2D.Raycast(leftPoint.position, Vector2.down, rayLength, GroundLayer);
         grounded = leftCheckHit;
+    }
+    public IEnumerator KnockBack(float forceX, float forceY,float duration, Transform otherObject)
+    {
+        int knockBackDirection;
+        if(transform.position.x < otherObject.position.x)
+        {
+            knockBackDirection = -1;
+        }
+        else
+        {
+            knockBackDirection = 1;
+        }
+
+        knockback = true;   
+        Rigidbody2D.linearVelocity = Vector2.zero;
+        Vector2 theForce = new Vector2(forceX * knockBackDirection, forceY);
+        Rigidbody2D.AddForce(theForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(duration);
+        knockback = false;
+        Rigidbody2D.linearVelocity = Vector2.zero;
     }
 }
 

@@ -134,10 +134,10 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 13
-        width: 31
-        height: 24
+        x: 0
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_1
       rect:
         serializedVersion: 2
-        x: 59
-        y: 12
-        width: 31
-        height: 24
+        x: 50
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_2
       rect:
         serializedVersion: 2
-        x: 109
-        y: 12
-        width: 30
-        height: 24
+        x: 100
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,19 +200,19 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 13
-        width: 29
-        height: 23
+        x: 150
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b41ed21afd542e80800000000000000
+      spriteID: c92df2a9408cfe54e9f04898a62f3c92
       internalID: -8204329292522449737
       vertices: []
       indices: 
@@ -222,19 +222,19 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_4
       rect:
         serializedVersion: 2
-        x: 212
-        y: 13
-        width: 27
-        height: 22
+        x: 200
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0920544b1c64c8970800000000000000
+      spriteID: c6102fd0d9dcbf04c9c679e911e64ed2
       internalID: 8758453173095826064
       vertices: []
       indices: 
@@ -244,19 +244,19 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_5
       rect:
         serializedVersion: 2
-        x: 265
-        y: 13
-        width: 24
-        height: 19
+        x: 250
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 07db15ed760e1b900800000000000000
+      spriteID: e6ff99b21f23f944c83594cb353c1693
       internalID: 698586153935289712
       vertices: []
       indices: 
@@ -266,19 +266,19 @@ TextureImporter:
       name: EnemyRedDog_Death_50x50_6
       rect:
         serializedVersion: 2
-        x: 314
-        y: 13
-        width: 25
-        height: 18
+        x: 300
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f05224879ac94a660800000000000000
+      spriteID: 19b7ff3f32963cd42aa5872fca9e5774
       internalID: 7396208739730203919
       vertices: []
       indices: 
@@ -288,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aac087ecf82aed44a889d3bc6ede2e76
     internalID: 0
     vertices: []
     indices: 
@@ -296,7 +296,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":50.0,"y":50.0},"gridSpriteSize":{"x":50.0,"y":50.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       EnemyRedDog_Death_50x50_0: -7092089226659804821
       EnemyRedDog_Death_50x50_1: -2478595594880283368
