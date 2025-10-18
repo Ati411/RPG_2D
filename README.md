@@ -1,9 +1,9 @@
 # Game 2D
-## หน้า UI โดยรวมภายใน
-<img width="1199" height="582" alt="image" src="https://github.com/user-attachments/assets/e38892a2-602b-41ee-a7f4-53e4b3485e6f" />
+## หน้า UI โดยรวมของเกม
+<img width="1318" height="529" alt="image" src="https://github.com/user-attachments/assets/82dde262-b80c-4095-b8db-9215524da377" />
 
 ## Player Move
-ใช้ปุ่ม A D ในการขยับตัวละครไปทางซ้ายและขวา ปุ่ม SpaceBar เป็นการทำให้ตัวละครกระโดด 
+ใช้ปุ่ม A D ในการขยับตัวละครไปทางซ้ายและขวา ปุ่ม SpaceBar เป็นการทำให้ตัวละครกระโดด กดคลิกซ้ายเพื่อทำการโจมตี
 
 <img width="1195" height="569" alt="image" src="https://github.com/user-attachments/assets/6337366b-835c-4fd1-b833-9add03ca5917" />
 
@@ -25,5 +25,6 @@
 ## Animation
 ทุกการเคลื่อนไหวของตัวละครจะแสดง Animation ของการกระทำต่างๆ เช่น ยืน การกระโดด เดิน โดน Damage และการตาย
 
-https://github.com/user-attachments/assets/b493b2b8-2c30-497b-8367-debd2d6d3f5a
+https://github.com/user-attachments/assets/82d86b3a-54f6-4902-bbce-fccc055109a0
+
 
